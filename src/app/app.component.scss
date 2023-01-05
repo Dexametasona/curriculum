@@ -1,0 +1,12 @@
+:host{
+    display: flex;
+    flex-direction: column;
+}
+nav{
+    background: linear-gradient(
+        rgba(8, 8, 8, 0.2),
+        rgba(8, 8, 8, 0.2)
+    ), url('https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzR8fGRldmVsb3BlcnxlbnwwfHwwfHw%3D&w=1000&q=80');
+    background-size: cover;
+    height: 50vh;
+}
