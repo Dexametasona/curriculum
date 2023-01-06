@@ -20,5 +20,12 @@
 }
 .social{
     width: 100%;
+    a{
+        transition: all 1s ease-in-out;
+        &:hover{
+            color: white;
+            transform: scale(1.2,1.2);
+        }
+    }
     
 }
