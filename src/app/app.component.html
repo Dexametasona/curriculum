@@ -1,10 +1,18 @@
-<nav class="text-slate-200 flex text-2xl">
-  <span class="grow mt-3 pl-3"><a routerLink="/home">Curriculum</a></span>
-  <ul class="flex w-1/2 justify-evenly mt-3">
-    <li><a routerLink="/about">Acerca</a></li>
-    <li><a routerLink="/skill">Habilidades</a></li>
-    <li><a routerLink="/portafolio">Portafolio</a></li>
-    <li><a routerLink="/contact">Contactame</a></li>
-  </ul>
-</nav>
-<router-outlet></router-outlet>
+<app-nav-bar [valor]="valor"></app-nav-bar>
+<router-outlet ></router-outlet>
+<!-- comunicacion de componentes para cambiar de color el nav bar-->
+<span [ngClass]="valor? 'bi-toggle-on':'bi-toggle-off'" class="ml-4 bi" (click)="darkMode()"></span>
+<div class="sugerencia flex">
+  <div>
+    <span>Sugerencias: </span>
+    <input class="border-2 p-1 rounded-md mx-3 w-1/2" type="text" placeholder="Tu sugerencia" [(ngModel)]="sug">
+    <button class="p-2 rounded-md bg-green-500" (click)="enviar()">Enviar</button>
+  </div>
+  <!-- ------------------ejemplo de ngFor/ngswitchCase and default -->
+  <div *ngFor="let y of listaSug">
+    <p [ngSwitch]="listaSug.length" class="mx-2">
+      <span *ngSwitchCase="4" class="text-red-500">{{y}}</span>
+      <span *ngSwitchDefault class="text-green-500 text-xl">{{y}}</span>
+    </p>
+  </div>
+</div>

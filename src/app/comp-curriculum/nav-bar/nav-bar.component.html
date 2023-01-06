@@ -1,0 +1,11 @@
+<nav [ngClass]="valor? 'text-slate-200':'text-slate-900'" class="flex text-2xl basis-full">
+  <div class="grow mt-3 pl-3">
+    <span [ngClass]="valor? 'bg-slate-900':'bg-slate-100'" class="rounded-md"><a routerLink='/home'>Curriculum</a></span>
+  </div>
+  <ul class="flex w-1/2 justify-evenly mt-3">
+    <li><a routerLink="/about">Acerca</a></li>
+    <li><a routerLink="/skill">Habilidades</a></li>
+    <li><a routerLink="/portafolio">Portafolio</a></li>
+    <li><a routerLink="/contact">Contacto</a></li>
+  </ul>
+</nav>
